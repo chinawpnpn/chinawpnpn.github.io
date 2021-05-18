@@ -1,322 +1,140 @@
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh_cn" lang="zh_cn">
+   <!DOCTYPE html>
+<html style="height:100%">
 <head>
-<meta name="viewport" content="width=device-width" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>我为仁人，共享阳光！
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="wpnpn的个人网站" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="revised" content="David, 2018/08/29/" />
+<meta name="keywords" content="wpnpn" />
+<link rel="icon" sizes="any" mask href="favicon.ico">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
 <style type="text/css">
-
-/* General styles */
-
-BODY {
-	background-color:#FFFFFF;
-	font-family:Verdana;
-	font-size:small;
-}
-
-A {
-	color: #000000;
-	text-decoration: none;
-}
-
-A:hover {
-	text-decoration: underline;
-}
-
-#top {
-	width:100%;
-	padding-bottom: 20px;
-}
-
-#top a span, #top a:hover, #top a span:hover{
-	color:#68a9d2;
-	font-weight:bold;
-	text-align:center;
-	font-size:large;
-}
-
-#top a {
-	display:block;
-	padding:20px 0 0 0;
-}
-
-#top span {
-	display:block;
-}
-
-div.subtitle{
-	width:80%;
-	margin: 0 auto;
-	color:#68a9d2;
-	text-align:center;
-}
-
-#frame {
-	border: 1px solid #CDD2D6;
-	text-align:left;
-	position: relative;
-	margin: 0 auto;
-	max-width:680px;
-	overflow:hidden;
-}
-
-#error {
-	max-width:450px;
-	background-color:#FFE4E1;
-	color:#000000;
-	padding:7pt;
-	position: relative;
-	margin: 10pt auto;
-	text-align:center;
-	border: 1px dotted #CDD2D6;
-}
-
-input {
-	border: 1px solid #CDD2D6;
-}
-
-.bar{
-	width:100%;
-	clear:both;
-	height:1px;
-}
-
-/* File list */
-
-table.table {
-	width:100%;
-	border-collapse: collapse;
-}
-
-table.table td{
-	padding:3px;
-}
-
-table.table tr.row.two {
-	background-color:#fcfdfe;
-}
-
-table.table tr.row.one {
-	background-color:#f8f9fa;
-}
-
-table.table tr.row td.icon {
-	width:25px;
-	padding-top:3px;
-	padding-bottom:1px;
-}
-
-table.table td.del {
-	width:25px;
-}
-
-table.table tr.row td.size {
-	width: 100px;
-	text-align: right;
-}
-
-table.table tr.row td.changed {
-	width: 150px;
-	text-align: center;
-}
-
-table.table tr.header img {
-	vertical-align:bottom;
-}
-
-table img{
-	border:0;
-}
-
-/* Info area */
-
-#info {
-	color:#000000;
-	font-family:Verdana;
-	max-width:680px;
-	position: relative;
-	margin: 0 auto;
-	text-align:center;
-}
-
-/* Thumbnail area */
-
-#thumb {
-	position:absolute;
-	border: 1px solid #CDD2D6;
-	background:#f8f9fa;
-	display:none;
-	padding:3px;
-}
-
-#thumb img {
-	display:block;
-}
-
-/* Login bar (at the bottom of the page) */
-#login_bar {
-	margin: 0 auto;
-	margin-top:2px;
-	max-width:680px;
-}
-
-#login_bar input.submit{
-	float:right;
-}
-
-/* Upload area */
-
-#upload {
-	margin: 0 auto;
-	margin-top:2px;
-	max-width:680px;
-}
-
-#upload #password_container {
-	margin-right:20px;
-}
-
-#upload #newdir_container, #upload #password_container {
-	float:left;
-}
-
-#upload #upload_container{
-	float:right;
-}
-
-#upload input.upload_dirname, #upload input.upload_password{
-	width:140px;
-}
-
-#upload input.upload_file{
-	font-size:small;
-}
-
-/* Breadcrumbs */
-
-div.breadcrumbs {
-	display:block;
-	padding:1px 3px;
-	color:#cccccc;
-	font-size:x-small;
-}
-
-div.breadcrumbs a{
-	display:inline-block;
-	color:#cccccc;
-	padding:2px 0;
-	font-size:small;
-}
-
-/* Login area */
-
-#login {
-	max-width:280px;
-	text-align:right;
-	margin:15px auto 50px auto;
-}
-
-#login div {
-	display:block;
-	width:100%;
-	margin-top:5px;
-}
-
-#login label{
-	width: 120px;
-	text-align: right;
-}
-
-/* Mobile interface */
-
-body.mobile #frame, body.mobile #info, body.mobile #upload {
-	max-width:none;
-}
-
-body.mobile {
-	font-size:medium;
-}
-
-body.mobile a.item {
-	display:block;
-	padding:10px 0;
-}
-
-body.mobile a.item span.size {
-	float:right;
-	margin-left:10px;
-}
-
-body.mobile table.table {
-	margin-bottom:30px;
-}
-
-body.mobile table.table tr td {
-	border-top: 1px solid #CDD2D6;
-}
-
-body.mobile table.table tr.last td {
-	border-bottom: 1px solid #CDD2D6;
-}
-
-body.mobile #top {
-	padding-bottom:3px;
-}
-
-body.mobile #top a {
-	padding-top:3px;
-}
-
-body.mobile #upload #password_container, body.mobile #upload #upload_container, body.mobile #upload #newdir_container {
-	float:none;
-	margin-top:5px;
-}
-
-body.mobile #upload input.upload_dirname, body.mobile #upload input.upload_password{
-	width:240px;
-}
-
-body.mobile #upload {
-	margin-bottom:15px;
-}
-
+div#container{height:100%; width:100%}
+div#tatle {background-color:#ffffff; height:17%; width:100%; float:left;}
+div#menu {background-color:#ffffff; height:75%; width:15%; float:left;}
+div#logo {background-color:#ffffff; height:75%; width:70%; float:left;}
+div#menus {background-color:#ffffff; height:75%; width:15%; float:left;}
+div#footer {background-color:#ffffff; height:8%; width:100%;clear:both; text-align:center;}
+h1 {margin:0;}
+ul {margin:0;}
 </style>
-
-<!-- <meta charset="UTF-8" /> -->
-<title>File Share</title>
 </head>
-<body class="mobile">
-<div id="frame">
-<div id="top">
-	<a href="?dir="><span>File Share</span></a>
+
+<body style="height:100%">
+
+<div id="container">
+
+<div id="tatle" align="center">
+<h1>欢迎光临，阳光之下：我为仁人，共享阳光！
+</h1>
 </div>
 
-<!-- START: List table -->
-<table class="table">
-<tr class="row two">
-	<td class="icon"><img alt="dir" src="?img=directory" /></td>
-	<td colspan="2" class="long">
-		<a class="item" href="?dir=Windows/">..</a>
-	</td>
-</tr>
 
-<tr class="row one">
-<td class="icon"><img alt="7z" src="?img=7z" /></td>
-<td class="name">
-		<a href="Windows/Stup/%E4%BC%98%E5%8C%96%E5%A4%A7%E5%B8%88_7.79.8.102.7z" class="item file">优化大师_7.79.8.102.7z<span class ="size">4.28 MB</span></a>
-</td>
-</tr>
+<div id="menu">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0,0 140,360">
+<rect width="140" height="360" style="fill:#ffffff"/>
+<g>
+<path d="M70,0 L105.27,108.54 12.94,41.46 127.06,41.46,34.73,108.54 Z" style="fill: #ffd700"/>
+<path d="M70,108.54 L41.47,20.73 116.17,75 23.83,75 98.53,20.73 Z" style="fill: #ffd700"/>
+<animateTransform attributeName="transform" begin="0s" dur="10s" type="rotate" from="0 70 60" to="360 70 60" repeatCount="indefinite"/>
+<animate attributeType="CSS"attributeName="opacity"values="1;0.3;1"dur="3s"repeatCount="indefinite"/>
+</g>
+<a xlink:href='/'target="_blank">
+<circle cx="70" cy="60" r="35" style="fill: #ffd700"/>
+</a>
+
+<g>
+<path d="M50,234.64 A40,40 0 0 1 30,160 A40,40 0 0 1 110,160 A40,40 0 0 1 90,234.64 Z"  style="fill: #009ccc"/>
+<path d="M50,234.64 A40,40 0 0 1 30,160 A40,40 0 0 1 110,160 A40,40 0 0 1 90,234.64 Z"  style="fill: #009ccc"/>
+</g>
+<a xlink:href='/share/'target="_blank">
+<path d="M61.25,222.45 A30,30 0 0 1 41.26,166.14 A30,30 0 0 1 99.71,155.84 L115.98,209.64 Z" style="fill: #bb0000"/>
+<animate attributeType="CSS"attributeName="opacity"values="1;0.3;1"dur="3s"repeatCount="indefinite"/>
+</a>
+
+<g>
+<path d="M100,340 L100,360 10,360 10,340 100,340 130,240 130,260 100,360 Z"  style="fill: #008000"/>
+</g>
+<a xlink:href='/blog/'target="_blank">
+<path d="M40,240 L130,240 100,340 10,340 Z" style="fill: #008000"/>
+<path d="M40,240 L130,240 124,260 34,260 Z" style="fill: #ffd700"/>
+<path d="M28,280 L118,280 112,300 22,300 Z" style="fill: #009ccc"/>
+<path d="M16,320 L106,320 100,340 10,340 Z" style="fill: #bb0000"/>
+</a>
+</svg>
+</div>
 
 
+<div id="logo">
+<table border="logo" width="100%" rules="rows">
+<tr><th align="left">文件备注</th><th align="left">文件名称</th><th align=right>文件大小</th></tr>
+
+<tr><td align="left">文件夹</td><td align="left"><a href=".">上级目录</a></td><td align="right">-</td></tr>
+
+<tr><td align="left">下载工具</td><td align="left"><a href="%E8%BF%85%E9%9B%B7_5.8.14.706.7z">迅雷_5.8.14.706.7z</a></td><td align="right">9.69 MB</td></tr>
+<tr><td align="left">系统优化工具</td><td align="left"><a href="%E4%BC%98%E5%8C%96%E5%A4%A7%E5%B8%88_7.79.8.102.7z">优化大师_7.79.8.102.7z</a></td><td align="right">4.28 MB</td></tr>
 </table>
-<!-- END: List table -->
 </div>
 
-<!-- START: Info area -->
-<div id="info">
-<a href="?s&amp;dir=Windows/Stup/">
-chinawpnpn</a> | 
-<a href="http://encode-explorer.siineiolekala.net">Encode Explorer</a>
+
+<div id="menus">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0,0 140,360">
+<rect width="140" height="360" style="fill:#ffffff"/>
+<g>
+<circle cx="70" cy="60" r="60" style="fill: #ffd700"/>
+</g>
+<a href="mailto:wpnpn@163.com">
+<circle cx="80" cy="70" r="40" style="fill: #009ccc"/>
+<animateTransform attributeName="transform" begin="0s" dur="10s" type="rotate" from="0 70 60" to="360 70 60" repeatCount="indefinite"/>
+</a>
+
+<g>
+<path d="M30,135 L55,135 60,165 80,165 85,135 110,135 130,225 100,225 90,185 50,185 40,225 10,225 Z" style="fill: #009ccc"/>
+</g>
+<a xlink:href='http://game.wpnpn.cn'target="_blank">
+<circle cx="40" cy="175" r="25" style="fill: #bb0000"/>
+<circle cx="100" cy="175" r="25" style="fill: #bb0000"/>
+<path d="M35,160 A5,5 0 0 1 45,160 L45,170 55,170 A5,5 0 0 1 55,180 L45,180 45,190 A5,5 0 0 1 35,190 L35,180 25,180 A5,5 0 0 1 25,170 L35,170 Z" style="fill: #008000"/>
+<circle cx="90" cy="165" r="5" style="fill: #008000"/>
+<circle cx="110" cy="165" r="5" style="fill: #008000"/>
+<circle cx="90" cy="185" r="5" style="fill: #008000"/>
+<circle cx="110" cy="185" r="5" style="fill: #008000"/>
+</a>
+
+<g>
+<circle cx="60" cy="350" r="10" style="fill: #008000"/>
+<circle cx="100" cy="350" r="10" style="fill: #008000"/>
+</g>
+<a xlink:href='http://mall.wpnpn.cn'target="_blank">
+<path d="M15,250 A5,5 0 0 1 15,240 L35,240 A5,5 0 0 1 40,245 A5,5 0 0 0 45,250 L130,250 120,320 55,320 A5,5 0 0 0 55,330 L115,330 A5,5 0 0 1 115,340 L40,340 30,250 Z " style="fill: #008000"/>
+<path d="M45,270 A5,5 0 0 1 45,260 L115,260 A5,5 0 0 1 115,270 Z" style="fill: #ffffff"/>
+<path d="M50,290 A5,5 0 0 1 50,280 L110,280 A5,5 0 0 1 110,290 Z" style="fill: #ffffff"/>
+<path d="M55,310 A5,5 0 0 1 55,300 L105,300 A5,5 0 0 1 105,310 Z" style="fill: #ffffff"/>
+</a>
+</svg>
 </div>
-<!-- END: Info area -->
+
+
+<div align="center" id="footer" style="color:#000000">
+<ul>
+<a href="/" target="_blank">我的主页</a>
+<a href="/share/" target="_blank">我的分享</a>
+<a href="/blog/" target="_blank">我的博客</a>
+<a href="mailto:wpnpn@163.com" target="_blank">我的邮箱</a>
+<a href="http://game.wpnpn.cn/" target="_blank">我的游戏</a>
+<a href="http://mall.wpnpn.cn/" target="_blank">我的商场</a>
+</ul>
+<p>版权 © 
+<a href="http://www.wpnpn.cn/" target="_blank">www.wpnpn.cn
+</a>保留所有设计权利
+</p>
+</div>
+
+</div>
+
 </body>
+
 </html>

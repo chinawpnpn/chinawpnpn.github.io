@@ -1,0 +1,18 @@
+通过修改host文件，提升访问网站的速度
+
+一、首先通过ping命令得到网站的IP地址。
+如通过ping githun.com
+得到github.com的IP地址140.82.112.4
+又如通过ping github.global.ssl.fastly.net
+得到github.global.ssl.fastly.net的IP地址199.232.69.194
+
+二、映射上面查找到的IP地址。
+Windows系统：
+1、修改C:\Windows\System32\drivers\etc\hosts文件的权限，指定文件可写入：
+右击->hosts->属性->安全->编辑->点击Users->在Users的权限“写入”后面打勾。然后点击确定。
+2、右击->hosts->打开方式->选定记事本（或者你喜欢的编辑器）->在末尾处添加以下内容：
+    140.82.112.4 github.com
+    199.232.69.194 github.global.ssl.fastly.net
+3、修改C:\Windows\System32\drivers\etc\hosts文件的权限，恢复文件只读属性：
+右击->hosts->属性->安全->编辑->点击Users->在Users的权限“写入”后面的勾去掉。然后点击确定。
+
